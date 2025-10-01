@@ -1,0 +1,27 @@
+[
+    {
+        "id":"01",
+        "name": "Chocolate Cake",
+        "price": 15
+    },
+    {
+        "id":"02",
+        "name": "Strawberry Cake",
+        "price": 20
+    },
+    {
+        "id":"03",
+        "name": "Cheese Cake",
+        "price": 22
+    },
+    {
+        "id":"04",
+        "name": "Vanilla Cake",
+        "price": 18
+    },
+    {
+        "id":"05",
+        "name": "Swiss Roll Cake",
+        "price": 10
+    }
+]

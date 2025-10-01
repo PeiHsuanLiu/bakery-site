@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Delicious cakes and pastries from POP Bakery. Order online!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>POP Bakery</title>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li id="home">
+                    <a href="#home" id="openCustomerForm">POP Bakery</a>
+                </li>
+                <li id="login">
+                    <a href="#login">Login</a>
+                </li>
+                <li id="cart">
+                    <a href="#shoppingCart">Cart<span id="cartDot"></span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         <!--main product list, including the images,prices and more-->
+        <div class="titleContainer">
+            <h2>Product List</h2>
+        </div>
+        <section class="flexContainer">
+            <div class="flexProduct">
+                <div class="imgContainer">
+                    <img src="images/chocolate.jpg" alt="Chocolate cake with dark chocolate frosting and sprinkles">
+                </div>
+                <div class="productInfo">
+                    <p class="productTitle"><strong>Chocolate Cake</strong> with dark frosting</p>
+                    <p class="price">$15</p>
+                </div>
+                <button type="button" class="openPopupBtn" data-id="01">ADD</button>
+            </div>
+            <div class="flexProduct">
+                <div class="imgContainer">
+                    <img src="images/strawberry.jpg"
+                        alt="Strawberry cake topped with fresh strawberries and whipped cream frosting">
+                </div>
+                <div class="productInfo">
+                    <p class="productTitle"><strong>Strawberry Cake</strong> with fresh strawberry</p>
+                    <p class="price">$20</p>
+                </div>
+                <button type="button" class="openPopupBtn" data-id="02">ADD</button>
+            </div>
+            <div class="flexProduct">
+                <div class="imgContainer">
+                    <img src="images/cheese.jpg"
+                        alt="New York-style cheesecake with a golden graham cracker crust and creamy topping">
+                </div>
+                <div class="productInfo">
+                    <p class="productTitle"><strong>Cheese Cake</strong> with NYC style cheese</p>
+                    <p class="price">$22</p>
+                </div>
+                <button type="button" class="openPopupBtn" data-id="03">ADD</button>
+            </div>
+            <div class="flexProduct">
+                <div class="imgContainer">
+                    <img src="images/vanilla.jpg"
+                        alt="Vanilla cake made with real vanilla paste and smooth buttercream frosting">
+                </div>
+                <div class="productInfo">
+                    <p class="productTitle"><strong>Vanilla Cake</strong> with fresh vanilla paste</p>
+                    <p class="price">$18</p>
+                </div>
+                <button type="button" class="openPopupBtn" data-id="04">ADD</button>
+            </div>
+            <div class="flexProduct">
+                <div class="imgContainer">
+                    <img src="images/swissroll.jpg"
+                        alt="Light sponge Swiss roll cake filled with sweet red bean paste and dusted with powdered sugar">
+                </div>
+                <div class="productInfo">
+                    <p class="productTitle"><strong>Swiss Roll Cake</strong> with red bean</p>
+                    <p class="price">$10</p>
+                </div>
+                <button type="button" class="openPopupBtn" data-id="05">ADD</button>
+            </div>
+        </section>
+        <!-- order popup and overly for showing the product details and decriptions -->
+        <div class="popupOverlay"></div>
+        <div class="pop">
+            <!-- shopping cart list showing selected products and the price with tax-->
+            <div class="cartList">
+                <div id="productDetails"></div>
+                <div id="taxes"></div>
+                <div id="estimatedTotal"></div>
+                <button type="button" id="checkOut">Check Out</button>
+            </div>
+            <div class="quantityContainer">
+                <p>Quantity:</p>
+                <button type="button" class="minus">-</button>
+                <span class="quantity">1</span>
+                <button type="button" class="plus">+</button>
+            </div>
+            <div class="closePopContainer">
+                <button id="closePop">Confirm</button>
+            </div>
+        </div>
+        <!-- customer evaluation form popup for submitting feedback-->
+        <div class="popupOverlay" id="customerFormOverlay"></div>
+        <div class="pop" id="customerForm">
+            <form id="formContent">
+                <h4>Customer Evaluation Form</h4>
+                <label for="name" class="formInfo">
+                    Name:<input id="name"></label>
+                <label for="email" class="formInfo">
+                    Email:<input type="email" id="email"></label>
+                <label for="orderNumber" class="formInfo">
+                    Order Number:<input id="orderNumber"></label>
+                <label for="feedBack" class="formInfo">Your Feedback:</label>
+                <textarea id="feedBack" placeholder="Writing your comments here ..."></textarea>
+                <div id="errorMessages"></div>
+                <button type="button" id="customerReview">Confirm</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerItem">Contact us: 123-456-7890</div>
+            <div class="footerItem">Email: popbakery@bestbakery.com</div>
+            <div class="footerItem">Fax: 890-765-4321</div>
+            <div class="footerItem">Address: 404 Popbakery Pkwy, Pinetree 80014</div>
+        </div>
+    </footer>
+</body>
+
+</html>
